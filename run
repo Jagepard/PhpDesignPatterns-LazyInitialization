@@ -1,0 +1,25 @@
+#! usr/bin/env php
+<?php
+
+namespace Creational\LazyInitialization;
+
+require_once 'vendor/autoload.php';
+
+$userService = new UserService();
+
+
+if ($userService->register('John')) {
+    echo sprintf("%s has been registered \n", $userService->getUserRepository('John')->getUserName());
+}
+
+if (!$userService->register('John')) {
+    echo sprintf("%s was already registered \n", $userService->getUserRepository('John')->getUserName());
+}
+
+if ($userService->login('John')) {
+    echo sprintf("%s is authenticated \n", $userService->getUserRepository('John')->getUserName());
+}
+
+if (!$userService->login('Bill')) {
+    echo sprintf("%s must be registered \n", 'Bill');
+}
