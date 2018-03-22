@@ -13,7 +13,7 @@ use Creational\LazyInitialization\UserService;
 
 
 /**
- * Class FactoryMethodTest
+ * Class LazyInitializationTest
  */
 class LazyInitializationTest extends PHPUnit_Framework_TestCase
 {
