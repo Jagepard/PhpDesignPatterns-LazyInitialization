@@ -1,63 +1,51 @@
 <?php
+
+declare(strict_types=1);
+
 /**
- * Date: 22.03.18
- * Time: 14:27
- *
  * @author    : Korotkov Danila <dankorot@gmail.com>
- * @copyright Copyright (c) 2018, Korotkov Danila
- * @license   http://www.gnu.org/licenses/gpl.html GNU GPLv3.0
+ * @license   https://mit-license.org/ MIT
  */
 
 namespace Creational\LazyInitialization;
 
-
+/**
+ * Class UserService
+ * @package Creational\LazyInitialization
+ */
 class UserService
 {
 
     /**
      * @var array
      */
-    protected $userRepository = [];
+    protected $users = [];
 
     /**
-     * @param string $userName
-     * @return bool
+     * @param string $name
+     * @return string
      */
-    public function register(string $userName): bool
+    public function register(string $name): string
     {
-        return $this->setUserRepository($userName);
-    }
+        if (!array_key_exists($name, $this->users)) {
+            $this->users[$name] = new MemoryUser($name);
 
-    /**
-     * @param string $userName
-     * @return bool
-     */
-    public function login(string $userName): bool
-    {
-        return array_key_exists($userName, $this->getUserRepository());
-    }
-
-    /**
-     * @param string $userName
-     * @return bool
-     */
-    protected function setUserRepository(string $userName): bool
-    {
-        if (!array_key_exists($userName, $this->getUserRepository())) {
-            $this->userRepository[$userName] = new MemoryUserRepository($userName);
-
-            return true;
+            return sprintf("%s has been registered \n", $name);
         }
 
-        return false;
+        return sprintf("%s was already registered \n", $name);
     }
 
     /**
-     * @param string $userName
-     * @return mixed
+     * @param string $name
+     * @return string
      */
-    public function getUserRepository(string $userName = null)
+    public function login(string $name): string
     {
-        return isset($userName) ? $this->userRepository[$userName] : $this->userRepository;
+        if (array_key_exists($name, $this->users)){
+            return sprintf("%s is authenticated \n", $name);
+        }
+
+        return sprintf("%s must be registered \n", $name);
     }
 }
