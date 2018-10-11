@@ -7,3 +7,5 @@
 
 # LazyInitialization | [API](https://github.com/Jagepard/PhpDesignPatterns-LazyInitialization/blob/master/docs.md "Documentation API")
 Отложенная инициализация
+
+![LazyInitialization](https://github.com/Jagepard/PhpDesignPatterns-LazyInitialization/blob/master/UML.png)
