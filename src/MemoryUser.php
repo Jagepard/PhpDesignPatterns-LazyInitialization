@@ -15,11 +15,10 @@ namespace Creational\LazyInitialization;
  */
 class MemoryUser
 {
-
     /**
      * @var
      */
-    protected $name;
+    private $name;
 
     /**
      * MemoryUser constructor.

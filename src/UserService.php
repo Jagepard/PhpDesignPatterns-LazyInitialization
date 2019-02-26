@@ -13,13 +13,12 @@ namespace Creational\LazyInitialization;
  * Class UserService
  * @package Creational\LazyInitialization
  */
-class UserService
+class UserService implements ServiceInterface
 {
-
     /**
      * @var array
      */
-    protected $users = [];
+    private $users = [];
 
     /**
      * @param string $name
