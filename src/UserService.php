@@ -26,13 +26,13 @@ class UserService implements ServiceInterface
      */
     public function register(string $name): string
     {
-        if (!array_key_exists($name, $this->users)) {
+        if (!array_key_exists($name, $this->getUsers())) {
             $this->users[$name] = new MemoryUser($name);
 
-            return sprintf("%s has been registered \n", $name);
+            return sprintf("%s has been registered \n", $this->getUsers()[$name]->getName());
         }
 
-        return sprintf("%s was already registered \n", $name);
+        return sprintf("%s was already registered \n", $this->getUsers()[$name]->getName());
     }
 
     /**
@@ -41,10 +41,18 @@ class UserService implements ServiceInterface
      */
     public function login(string $name): string
     {
-        if (array_key_exists($name, $this->users)){
+        if (array_key_exists($name, $this->getUsers())){
             return sprintf("%s is authenticated \n", $name);
         }
 
         return sprintf("%s must be registered \n", $name);
+    }
+
+    /**
+     * @return array
+     */
+    public function getUsers(): array
+    {
+        return $this->users;
     }
 }
