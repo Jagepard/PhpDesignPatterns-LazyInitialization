@@ -13,10 +13,10 @@ namespace Creational\LazyInitialization;
  * Class MemoryUser
  * @package Creational\LazyInitialization
  */
-class MemoryUser
+class MemoryUser implements UserInterface
 {
     /**
-     * @var
+     * @var string
      */
     private $name;
 
@@ -27,5 +27,13 @@ class MemoryUser
     public function __construct(string $name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName(): string
+    {
+        return $this->name;
     }
 }
