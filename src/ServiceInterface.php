@@ -7,10 +7,6 @@
 
 namespace Creational\LazyInitialization;
 
-/**
- * Interface ServiceInterface
- * @package Creational\LazyInitialization
- */
 interface ServiceInterface
 {
     /**

@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\LazyInitialization;
 
-/**
- * Class MemoryUser
- * @package Creational\LazyInitialization
- */
 class MemoryUser implements UserInterface
 {
     /**
