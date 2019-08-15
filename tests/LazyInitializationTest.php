@@ -13,9 +13,6 @@ use Creational\LazyInitialization\UserService;
 use Creational\LazyInitialization\ServiceInterface;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
-/**
- * Class LazyInitializationTest
- */
 class LazyInitializationTest extends PHPUnit_Framework_TestCase
 {
     /**

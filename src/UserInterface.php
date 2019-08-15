@@ -7,10 +7,6 @@
 
 namespace Creational\LazyInitialization;
 
-/**
- * Interface UserInterface
- * @package Creational\LazyInitialization
- */
 interface UserInterface
 {
     /**
