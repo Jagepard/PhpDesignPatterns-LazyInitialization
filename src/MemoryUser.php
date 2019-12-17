@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 /**
- * @author    : Korotkov Danila <dankorot@gmail.com>
- * @license   https://mit-license.org/ MIT
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
  */
 
 namespace Creational\LazyInitialization;
@@ -14,22 +14,22 @@ class MemoryUser implements UserInterface
     /**
      * @var string
      */
-    private $name;
+    private $userName;
 
     /**
      * MemoryUser constructor.
-     * @param $name
+     * @param  string  $userName
      */
-    public function __construct(string $name)
+    public function __construct(string $userName)
     {
-        $this->name = $name;
+        $this->userName = $userName;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName(): string
+    public function getUserName(): string
     {
-        return $this->name;
+        return $this->userName;
     }
 }

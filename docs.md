@@ -9,11 +9,8 @@
 
 ### Class: \Creational\LazyInitialization\UserService
 
-> Class UserService
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>getUsers()</strong> : <em>array</em> |
 | public | <strong>login(</strong><em>\string</em> <strong>$name</strong>)</strong> : <em>string</em> |
 | public | <strong>register(</strong><em>\string</em> <strong>$name</strong>)</strong> : <em>string</em> |
 
@@ -23,20 +20,16 @@
 
 ### Class: \Creational\LazyInitialization\MemoryUser
 
-> Class MemoryUser
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct(</strong><em>mixed/\string</em> <strong>$name</strong>)</strong> : <em>void</em><br /><em>MemoryUser constructor.</em> |
-| public | <strong>getName()</strong> : <em>mixed</em> |
+| public | <strong>__construct(</strong><em>\string</em> <strong>$userName</strong>)</strong> : <em>void</em><br /><em>MemoryUser constructor.</em> |
+| public | <strong>getUserName()</strong> : <em>string</em> |
 
 *This class implements [\Creational\LazyInitialization\UserInterface](#interface-creationallazyinitializationuserinterface)*
 
 <hr />
 
 ### Interface: \Creational\LazyInitialization\ServiceInterface
-
-> Interface ServiceInterface
 
 | Visibility | Function |
 |:-----------|:---------|
@@ -47,9 +40,7 @@
 
 ### Interface: \Creational\LazyInitialization\UserInterface
 
-> Interface UserInterface
-
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>getName()</strong> : <em>string</em> |
+| public | <strong>getUserName()</strong> : <em>string</em> |
 
