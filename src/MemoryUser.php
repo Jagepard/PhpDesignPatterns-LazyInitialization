@@ -11,25 +11,15 @@ namespace Creational\LazyInitialization;
 
 class MemoryUser implements UserInterface
 {
-    /**
-     * @var string
-     */
-    private $userName;
+    private string $name;
 
-    /**
-     * MemoryUser constructor.
-     * @param  string  $userName
-     */
-    public function __construct(string $userName)
+    public function __construct(string $name)
     {
-        $this->userName = $userName;
+        $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
-    public function getUserName(): string
+    public function getName(): string
     {
-        return $this->userName;
+        return $this->name;
     }
 }
