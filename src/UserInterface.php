@@ -9,8 +9,5 @@ namespace Creational\LazyInitialization;
 
 interface UserInterface
 {
-    /**
-     * @return string
-     */
-    public function getUserName(): string;
+    public function getName(): string;
 }
