@@ -6,6 +6,7 @@
 -----
 
 # LazyInitialization | [API](https://github.com/Jagepard/PhpDesignPatterns-LazyInitialization/blob/master/docs.md "Documentation API")
+
 ```php run``` execute in terminal
 
 ##Result:
