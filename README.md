@@ -7,4 +7,12 @@
 
 # LazyInitialization | [API](https://github.com/Jagepard/PhpDesignPatterns-LazyInitialization/blob/master/docs.md "Documentation API")
 
-```php run``` Запустить исполнение шаблона в терминале
+```php run``` execute in terminal
+
+##Result:
+```
+John must be registered 
+John has been registered 
+John is authenticated 
+John was already authenticated 
+```
