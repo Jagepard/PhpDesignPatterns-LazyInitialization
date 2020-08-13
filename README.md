@@ -6,4 +6,5 @@
 -----
 
 # LazyInitialization | [API](https://github.com/Jagepard/PhpDesignPatterns-LazyInitialization/blob/master/docs.md "Documentation API")
+
 ```php run``` Запустить исполнение шаблона в терминале
