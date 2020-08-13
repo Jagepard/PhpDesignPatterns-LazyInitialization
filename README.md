@@ -9,7 +9,7 @@
 
 ```php run``` execute in terminal
 
-##Result:
+## Result:
 ```
 John must be registered 
 John has been registered 
