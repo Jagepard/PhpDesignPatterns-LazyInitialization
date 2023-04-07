@@ -14,6 +14,14 @@ class UserService implements ServiceInterface
     private array $users        = [];
     private bool $authenticated = false;
 
+    /**
+     * Registers a new user
+     * --------------------
+     * Регистрирует нового пользователя
+     * 
+     * @param  string $name
+     * @return string
+     */
     public function register(string $name): string
     {
         if (!array_key_exists($name, $this->users)) {
@@ -25,6 +33,14 @@ class UserService implements ServiceInterface
         return $this->login($this->users[$name]->getName());
     }
 
+    /**
+     * Identifies the user
+     * -------------------
+     * Идентифицирует  пользователя
+     * 
+     * @param  string $name
+     * @return string
+     */
     public function login(string $name): string
     {
         if (array_key_exists($name, $this->users)){
